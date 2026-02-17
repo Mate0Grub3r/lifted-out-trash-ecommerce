@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link, NavLink } from 'react-router-dom';
 import CartWidget from './CartWidget';
 
 const NavBar = () => {
@@ -17,9 +18,9 @@ const NavBar = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           
-          <a className="navbar-brand mx-auto" href="/">
+          <Link className="navbar-brand mx-auto" to="/">
             Lifted Out Trash™
-          </a>
+          </Link>
 
           <div
             className="offcanvas offcanvas-start text-bg-dark"
@@ -52,24 +53,24 @@ const NavBar = () => {
                     </button>
                     <ul className="dropdown-menu dropdown-menu-dark">
                       <li>
-                        <a className="dropdown-item" href="#remeras">
+                        <NavLink className="dropdown-item" to="/category/remeras">
                           Remeras
-                        </a>
+                        </NavLink>
                       </li>
                       <li>
-                        <a className="dropdown-item" href="#ziphoodies">
+                        <NavLink className="dropdown-item" to="/category/ziphoodies">
                           Zip-Hoodies
-                        </a>
+                        </NavLink>
                       </li>
                       <li>
-                        <a className="dropdown-item" href="#hoodies">
+                        <NavLink className="dropdown-item" to="/category/hoodies">
                           Hoodies
-                        </a>
+                        </NavLink>
                       </li>
                       <li>
-                        <a className="dropdown-item" href="#baggys">
+                        <NavLink className="dropdown-item" to="/category/baggys">
                           Baggy Jeans
-                        </a>
+                        </NavLink>
                       </li>
                     </ul>
                   </li>
@@ -84,24 +85,24 @@ const NavBar = () => {
                     </button>
                     <ul className="dropdown-menu dropdown-menu-dark">
                       <li>
-                        <a className="dropdown-item" href="#remeras">
+                        <NavLink className="dropdown-item" to="/category/remeras">
                           Tops
-                        </a>
+                        </NavLink>
                       </li>
                       <li>
-                        <a className="dropdown-item" href="#ziphoodies">
+                        <NavLink className="dropdown-item" to="/category/ziphoodies">
                           Zip-Hoodies
-                        </a>
+                        </NavLink>
                       </li>
                       <li>
-                        <a className="dropdown-item" href="#hoodies">
+                        <NavLink className="dropdown-item" to="/category/hoodies">
                           Hoodies
-                        </a>
+                        </NavLink>
                       </li>
                       <li>
-                        <a className="dropdown-item" href="#baggys">
+                        <NavLink className="dropdown-item" to="/category/baggys">
                           Baggy Jeans
-                        </a>
+                        </NavLink>
                       </li>
                     </ul>
                   </li>

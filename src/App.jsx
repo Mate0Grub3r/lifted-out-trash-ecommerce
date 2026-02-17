@@ -1,10 +1,12 @@
 import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
+import ItemDetailContainer from './components/ItemDetailContainer';
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <header>
         <NavBar />
         
@@ -13,7 +15,29 @@ function App() {
         </div>
       </header>
       
-      <ItemListContainer greeting="Welcome to Lifted Out Trash™" />
+      <Routes>
+        <Route 
+          path="/" 
+          element={<ItemListContainer greeting="Welcome to Lifted Out Trash™" />} 
+        />
+        <Route 
+          path="/category/:categoryId" 
+          element={<ItemListContainer greeting="Welcome to Lifted Out Trash™" />} 
+        />
+        <Route 
+          path="/item/:itemId" 
+          element={<ItemDetailContainer />} 
+        />
+        <Route 
+          path="*" 
+          element={
+            <main className="not-found-container">
+              <h1>404 - Página no encontrada</h1>
+              <p>La página que buscas no existe.</p>
+            </main>
+          } 
+        />
+      </Routes>
 
       <footer>
         <div className="footer-background">
@@ -34,7 +58,7 @@ function App() {
           </div>
         </div>
       </footer>
-    </>
+    </BrowserRouter>
   );
 }
 
